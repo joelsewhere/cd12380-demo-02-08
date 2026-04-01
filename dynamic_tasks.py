@@ -77,7 +77,7 @@ def dynamic_tasks():
     def collect_results(summaries: list[dict]) -> None:
         print("\n── Regional summary ──────────────────────")
         for s in sorted(summaries, key=lambda x: x["attainment_pct"], reverse=True):
-            bar = "█" * int(s["attainment_pct"] / 10)
+            bar = "█" * int(s["attainment_pct"])
             print(f"  {s['region']:<6} {bar:<10} {s['attainment_pct']}%")
         print("──────────────────────────────────────────")
 
